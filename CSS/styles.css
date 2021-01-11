@@ -209,8 +209,16 @@ Hero
   color: var(--color-white);
 }
 
-@media screen (min-width: 800px) {
-  background: linear-gradient(to right, rgba(, 0.7), rgba(, 0.7));
+@media screen and (min-width: 800px) {
+  .hero{
+    background: linear-gradient( rgba(44, 174, 186, 0.6), rgba(0, 0, 0, 0.7)), url(../images/main.jpeg) center/cover no-repeat;
+    padding: 0.5rem 2rem;
+  }
+
+  .hero-banner p {
+    max-width: 45rem;
+    margin: 2rem auto;
+  }
 }
 
 /*
@@ -218,6 +226,7 @@ Hero
 About
 ===============
 */
+
 /* section add to globals */
 /* title add to globals */
 /* section center add to globals */
