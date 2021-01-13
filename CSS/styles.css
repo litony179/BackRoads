@@ -46,7 +46,8 @@ Global styles
 ======================
 */
 
-*, ::before {
+*,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -159,31 +160,31 @@ p {
   background-color: var(--color-primary-8);
 }
 
-.section{
+.section {
   padding: 5rem 0;
 }
 
-.section-title{
+.section-title {
   text-align: center;
   margin-bottom: 4rem;
 }
 
-.section-title h2{
+.section-title h2 {
   text-transform: uppercase;
 }
 
-.section-title span{
+.section-title span {
   color: var(--color-primary-color-5);
 }
 
-.section-center{
+.section-center {
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
 }
 
-@media sceen and (min-width: 992px){
-  .section-center{
+@media sceen and (min-width: 992px) {
+  .section-center {
     width: 95vw;
   }
 }
@@ -239,8 +240,9 @@ Hero
 }
 
 @media screen and (min-width: 992px) {
-  .hero{
-    background: linear-gradient( rgba(44, 174, 186, 0.6), rgba(0, 0, 0, 0.7)), url(../images/main.jpeg) center/cover no-repeat;
+  .hero {
+    background: linear-gradient(rgba(44, 174, 186, 0.6), rgba(0, 0, 0, 0.7)),
+      url(../images/main.jpeg) center/cover no-repeat;
     padding: 0.5rem 2rem;
   }
 
@@ -256,22 +258,21 @@ About
 ===============
 */
 
-
-.about-img{
+.about-img {
   margin-bottom: 2rem;
 }
 
-.about-info{
+.about-info {
   margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 992px){
-  .about-center{
+@media screen and (min-width: 992px) {
+  .about-center {
     display: flex;
     justify-content: space-between;
   }
 
-  .about-col{
+  .about-col {
     /* This is a shorthand for:
     flex-grow
     flex-shring
@@ -284,12 +285,12 @@ About
     align-self: center;
   }
 
-  @media screen and (min-width: 1170px){
+  @media screen and (min-width: 1170px) {
     .about-img {
       position: relative;
     }
 
-    .about-img::before{
+    .about-img::before {
       content: "";
       position: absolute;
       width: 100%;
@@ -298,7 +299,6 @@ About
       top: -1.5rem;
       left: -1.5rem;
       z-index: -1;
-
     }
   }
 }
@@ -308,17 +308,16 @@ About
 Services
 ===============
 */
-#services{
+#services {
   background-color: var(--color-grey-10);
 }
 
-.service{
+.service {
   text-align: center;
   margin-bottom: 3rem;
-  
 }
 
-.service-icon{
+.service-icon {
   display: inline-block;
   background-color: var(--color-primary-color-5);
   color: var(--color-primary-1);
@@ -327,58 +326,147 @@ Services
   margin-bottom: 2rem;
 }
 
-.service-text{
+.service-text {
   max-width: 20rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media screen and (min-width: 576px){
-  .services-center{
+@media screen and (min-width: 576px) {
+  .services-center {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
-  .service{
+  .service {
     flex: 0 0 calc(50% - 1rem);
     margin-bottom: 0;
   }
 }
 
-@media screen and (min-width: 992px){
-  .service{
+@media screen and (min-width: 992px) {
+  .service {
     flex: 0 0 calc(33.3% - 1rem);
     margin-bottom: 0;
   }
 }
 
-@media screen and (min-width: 1170px){
-  .service{
+@media screen and (min-width: 1170px) {
+  .service {
     display: flex;
     text-align: left;
   }
 
-  .service-icon{
+  .service-icon {
     align-self: start;
   }
 
-  .service-icon{
+  .service-icon {
     margin-right: 1rem;
   }
 
-  .service-title{
+  .service-title {
     margin-bottom: 0.5rem;
   }
 }
-
 
 /*
 =============== 
 Featured Tours
 ===============
 */
+.tour-card {
+  background-color: var(--color-grey-10);
+  border-radius: 5px;
+  transition: var(--transition);
+  box-shadow: var(--light-shadow);
+  margin-bottom: 2rem;
+}
 
+.tour-card:hover {
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.02);
+}
+
+.tour-img-container {
+  position: relative;
+}
+
+.tour-img {
+  height: 30rem;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.tour-date {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-primary-8);
+  padding: 0.5rem;
+  margin-bottom: 0;
+}
+
+.tour-info {
+  margin: 2rem auto;
+  width: 90%;
+}
+
+.tour-footer,
+.tour-footer p {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-primary-6);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.tour-btn {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .tour-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .tour-card {
+    flex: 0 0 calc(50% - 2rem);
+  }
+
+  .tour-info {
+    margin-bottom: 1rem;
+  }
+
+  .tour-footer {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .tour-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .tour-card {
+    flex: 0 0 calc(33.3% - 2rem);
+  }
+
+  .tour-info {
+    margin-bottom: 1rem;
+  }
+
+  .tour-footer {
+    margin-bottom: 1rem;
+  }
+}
 /*
 =============== 
 Contact
