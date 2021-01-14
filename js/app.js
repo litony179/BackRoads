@@ -1,8 +1,5 @@
 // ********** set date ************
 // select span
-const date = (document.getElementById(
-  "date"
-).innerHTML = new Date().getFullYear());
 
 // ********** nav toggle ************
 // select button and links
@@ -25,7 +22,10 @@ scrollLinks.forEach(link => {
     const id = e.target.getAttribute("href").slice(1);
     const element = document.getElementById(id);
     //
+    console.log(element);
+
     let position = element.offsetTop - 62;
+    console.log(position);
 
     window.scrollTo({
       left: 0,
